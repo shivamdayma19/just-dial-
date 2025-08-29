@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/output.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <style>
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-200 px-35">
+    <main class="bg-white">
+      <header class="flex items-center justify-between mb-10 p-5">
+        <img src="images/jdlogosvg.svg" alt="" class="w-25" />
+        <div class="flex gap-4 font-light text-sm">
+          <a href="#" class="inline-flex items-center text-blue-800"
+            ><i class="ph ph-chats-teardrop"></i>En<i
+              class="ph ph-caret-down"
+            ></i
+          ></a>
+          <a href="#" class="inline-flex items-center">We are Hiring</a>
+          <a href="#" class="inline-flex items-center">Invester Relation</a>
+          <a href="#" class="inline-flex items-center"
+            ><i class="ph ph-envelope text-xl"></i>Leads</a
+          >
+          <a href="#" class="inline-flex items-center"
+            ><i class="ph ph-megaphone"></i>Advertise</a
+          >
+          <a href="#" class="inline-flex items-center">Free Listing</a>
+          <a href="#" class="inline-flex items-center"
+            ><i class="ph ph-bell-simple-ringing text-2xl"></i
+          ></a>
+          <a href="#" class="inline-flex items-center"
+            ><span class="bg-blue-500 p-2 rounded font-semibold text-white"
+              >Login / Signup</span
+            ></a
+          >
+        </div>
+      </header>
+      <!-- main-contaier -->
+      <section class="px-8">
+        <div class="text-2xl font-bold mb-2">
+          Search across‘4.7 Crore+‘
+          <span class="text-blue-500">Businesses</span>
+        </div>
+
+        <section class="flex">
+          <div class="relative">
+            <input
+              class="bg-gray-200 p-2 mb-8 rounded border px-8 border-gray-400"
+              type="text"
+              placeholder="Mumbai"
+            />
+            <i class="ph ph-map-pin absolute right-53 top-3"></i>
+          </div>
+
+          <div class="relative">
+            <input
+              class="border-gray-500 border p-2 rounded ml-3 w-lg"
+              type="text"
+              placeholder="Serch for Real Estate Agents"
+            />
+            <i
+              class="ph ph-magnifying-glass absolute bg-red-500 text-white p-1 rounded right-2 top-2 text-md"
+            ></i>
+            <i class="ph ph-microphone absolute right-9 top-3 text-xl"></i>
+          </div>
+        </section>
+
+        <section
+          class="flex gap-6 justify-start mb-15 overflow-hidden flex-wrap"
+        >
+          <img
+            src="desktop-images/Screenshot 2025-08-26 at 2.42.03 PM.png"
+            alt=""
+            class="w-[600px] h-[245px]"
+          />
+
+          <div class="flex gap-5">
+            <div class="relative w-[160px] xl:h-[150px]">
+              <img
+                class="bg-blue-500 rounded-xl"
+                src="./images/b2b_square_hotkey.webp"
+                alt="b2b"
+              />
+              <div class="absolute top-4 left-2 text-white">
+                <p class="font-bold">B2B</p>
+                <p class="text-xs font-light">Quicks</p>
+                <p class="text-xs font-light">Quotes</p>
+              </div>
+            </div>
+
+            <div class="relative w-[160px] h-[150px]">
+              <img
+                class="bg-blue-900 rounded-xl"
+                src="./images/repair_square_hotkey.webp"
+                alt="b2b"
+              />
+              <div class="absolute top-4 left-2 text-white">
+                <p class="font-bold">REPAIR & SERVICES</p>
+                <p class="text-xs font-light">Get</p>
+                <p class="text-xs font-light">Nearest</p>
+                <p class="text-xs font-light">vendor</p>
+              </div>
+            </div>
+
+            <div class="relative w-[160px] h-[150px]">
+              <img
+                class="bg-violet-700 rounded-xl"
+                src="./images/realestate_square_hotkey.webp"
+                alt="b2b"
+              />
+              <div class="absolute top-4 left-2 text-white">
+                <p class="font-bold">REAL ESTATE</p>
+                <p class="text-xs font-light">Finest</p>
+                <p class="text-xs font-light">Agents</p>
+              </div>
+            </div>
+
+            <div class="relative w-[160px] h-[150px]">
+              <img
+                class="bg-green-700 rounded-xl"
+                src="./images/doctor_square_hotkey.webp"
+                alt="b2b"
+              />
+              <div class="absolute top-4 left-2 text-white">
+                <p class="font-bold">DOCTORS</p>
+                <p class="text-xs font-light">Book</p>
+                <p class="text-xs font-light">Now</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid grid-cols-10 gap-5 mb-10">
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/restaurant-2022.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Restautants
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/hotel-2022.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Hotels
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/beauty.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />Beauty spa
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/homedecor.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Home Decore
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/hotkey_wedding_icon.gif.webp"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Wedding Planning
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/education.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Education
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/renthire.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Renr & Hire
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/hospital_2023.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Hospital
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/contractor-2022.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Contracrtor
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/pet_shops_2023.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Pet Shop
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/pg-hostels-rooms.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            PG/Hostels
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/estate-agent.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Estate Agents
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/dentist_2023.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Dentist
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/gym_2023.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Gym
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/loans.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Loans
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/eventorganizers.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Event Organiser
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/driving_school_2023.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Driving School
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/packers_movers_2023.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Packer & Movers
+          </a>
+
+          <a href="#" class="inline-flex flex-col items-center text-sm">
+            <img
+              src="desktop-images/courier_2023-1.svg"
+              alt=""
+              class="border border-gray-300 p-2 w-[60px] rounded-lg mb-3"
+            />
+            Courier Services
+          </a>
+        </section>
+
+        <section class="grid grid-cols-2 gap-5 mb-10">
+          <div class="p-8 rounded-xl border border-gray-300">
+            <h1 class="font-semibold text-xl mb-5 ml-2">Wedding Requisites</h1>
+            <div class="flex gap-5 text-center justify-between">
+              <div class="text-md">
+                <img
+                  src="desktop-images/banquethalls_rectangle_2024.webp"
+                  alt=""
+                  class="w-full mb-3"
+                />
+                Benquet Hall
+              </div>
+              <div class="text-md">
+                <img
+                  src="desktop-images/bridalrequisite_rectangle_2024.webp"
+                  alt=""
+                  class="w-full mb-3"
+                />
+                Braidal Request
+              </div>
+              <div class="text-md">
+                <img
+                  src="desktop-images/caterers_rectangle_2024.webp"
+                  alt=""
+                  class="w-full mb-3"
+                />
+                Caterers
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 rounded-xl border border-gray-300 gap-5 w">
+            <h1 class="font-semibold text-xl mb-5 ml-2">Beauty & Spa</h1>
+            <div class="flex gap-5">
+              <div class="inline-block text-center text-md">
+                <img
+                  src="desktop-images/beautyparlours_rectangle_2024.webp"
+                  alt=""
+                  class="w-full mb-3"
+                />
+                Beauty Parlour
+              </div>
+              <div class="inline-block text-center text-md">
+                <img
+                  src="desktop-images/spamassages_rectangle_2024.webp"
+                  alt=""
+                  class="w-full mb-3"
+                />
+                Benquet Hall
+              </div>
+              <div class="inline-block text-center text-md">
+                <img
+                  src="desktop-images/salons_rectangle_2024.webp"
+                  alt=""
+                  class="w-full mb-3"
+                />
+                Spa & Massages
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 rounded-xl border gap-5 border-gray-300">
+            <h1 class="font-semibold text-xl mb-5 ml-2">Repair & Services</h1>
+            <div class="flex gap-5">
+              <div class="inline-block text-center text-md">
+                <img
+                  src="desktop-images/hkim_acrepair.png.avif"
+                  alt=""
+                  class="w-full mb-3"
+                />
+                AC Services
+              </div>
+              <div class="inline-block text-center text-md">
+                <img
+                  src="desktop-images/carservice_rectangle_2024.webp"
+                  alt=""
+                  class="w-full mb-3"
+                />
+                Car Services
+              </div>
+              <div class="inline-block text-center text-md">
+                <img
+                  src="desktop-images/bikeservice_rectangle_2024.webp"
+                  alt=""
+                  class="w-full mb-3"
+                />
+                Bike Services
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 rounded-xl border gap-5 border-gray-300">
+            <h1 class="font-semibold text-xl mb-5 ml-2">Daily Needs</h1>
+            <div class="flex gap-5">
+              <div class="inline-block text-center text-md">
+                <img
+                  src="desktop-images/hkim_movies.png.webp"
+                  alt=""
+                  class="w-full mb-3"
+                />Movies
+              </div>
+              <div class="inline-block text-center text-md">
+                <img
+                  src="desktop-images/grocery_rectangle_2024.webp"
+                  alt=""
+                  class="w-full mb-3"
+                />
+                Grocery
+              </div>
+              <div class="inline-block text-center text-md">
+                <img
+                  src="desktop-images/electricians_rectangle_2024.webp"
+                  alt=""
+                  class="w-full mb-3"
+                />
+                Electeician
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="border border-gray-300 p-4 rounded-2xl mb-8">
+          <div class="flex justify-evenly gap-20 p-10 border-b border-gray-300">
+            <div>
+              <h1 class="text-2xl font-bold mb-2">Bills & Recharge</h1>
+              <p class="text-xs mb-2">
+                Pay your bills & recharge with Justdial
+              </p>
+              <p class="text-sm text-blue-500">Explore More</p>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="desktop-images/bt_mobile.svg"
+                alt=""
+                class="border border-gray-300 rounded-2xl mb-2"
+              /><span>Mobile</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="desktop-images/bt_electricity.svg"
+                alt=""
+                class="border border-gray-300 rounded-2xl mb-2"
+              /><span>Electicity</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="desktop-images/bt_dth.svg"
+                alt=" "
+                class="border border-gray-300 rounded-2xl mb-2"
+              /><span>DTH</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="desktop-images/bt_water.svg"
+                alt=""
+                class="border border-gray-300 rounded-2xl mb-2"
+              /><span>Water</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="desktop-images/bt_gas.svg"
+                alt=""
+                class="border border-gray-300 rounded-2xl mb-2"
+              /><span>Gas</span>
+            </div>
+            <div class="flex flex-col items-center">
+              <img
+                src="desktop-images/bt_insurance.svg"
+                alt=""
+                class="border border-gray-300 rounded-2xl mb-2"
+              />Insurance
+            </div>
+          </div>
+
+          <div class="flex p-10 gap-15">
+            <div>
+              <h1 class="text-2xl font-bold mb-2">Trave Booking</h1>
+              <p class="text-xs mb-2">
+                Instant ticet booking for your best travel <br />experience
+              </p>
+              <p class="text-sm text-blue-500">Explore More</p>
+            </div>
+            <div class="flex gap-20">
+              <div class="flex flex-col items-center">
+                <img
+                  src="desktop-images/bt_flight.svg"
+                  alt=""
+                  class="border border-gray-300 rounded-2xl mb-2"
+                /><span>Flight</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <img
+                  src="desktop-images/bt_bus.svg"
+                  alt=""
+                  class="border border-gray-300 rounded-2xl mb-2"
+                /><span>Bus</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <img
+                  src="desktop-images/bt_train.svg"
+                  alt=" "
+                  class="border border-gray-300 rounded-2xl mb-2"
+                /><span>Train</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <img
+                  src="desktop-images/bt_hotels.svg"
+                  alt=""
+                  class="border border-gray-300 rounded-2xl mb-2"
+                /><span>Hotel</span>
+              </div>
+              <div class="flex flex-col items-center">
+                <img
+                  src="desktop-images/bt_carhire.svg"
+                  alt=""
+                  class="border border-gray-300 rounded-2xl mb-2"
+                /><span>Car Rental</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- <section class="border p-4">
+          <div class="flex gap-3"><h1 class="font-bold text-2xl">Trending Searches Near You</h1><span class="bg-red-500 text-white text-md p-1 flex items-center ">New</span></div>
+          <div class="text-md"> Stay updated with the latest local trends   </div>
+        </section> -->
+        <div class="font-bold text-2xl mb-5">Latest Movies & Reviews</div>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide flex flex-col">
+              <img
+                src="images/centralized_161527102025_07_14_09_42_15_220.avif"
+                alt=""
+                class=""
+              /><span class="font-bold text-2xl"
+                >Param Sundari (Hindi Movies)</span
+              >
+              <p>Hindi . 2D</p>
+            </div>
+            <div class="swiper-slide flex flex-col">
+              <img
+                src="images/centralized_161571212025_02_05_01_34_14_220.avif"
+                alt=""
+              /><span class="font-bold text-2xl">Narshimha</span>
+              <p>Hindi . 2D</p>
+            </div>
+            <div class="swiper-slide flex flex-col">
+              <img
+                src="images/centralized_161995312025_06_26_03_34_13_220.avif"
+                alt=""
+              /><span class="font-bold text-2xl"
+                >Param Sundari (Hindi Movies)</span
+              >
+              <p>Hindi . 2D</p>
+            </div>
+            <div class="swiper-slide flex flex-col">
+              <img
+                src="images/centralized_162039232025_06_20_02_34_02_220.avif"
+                alt=""
+              /><span class="font-bold text-2xl"
+                >Param Sundari (Hindi Movies)</span
+              >
+              <p>Hindi . 2D</p>
+            </div>
+            <div class="swiper-slide flex flex-col">
+              <img
+                src="images/centralized_162072342025_07_04_12_26_30_220 2.avif"
+                alt=""
+              /><span class="font-bold text-2xl"
+                >Param Sundari (Hindi Movies)</span
+              >
+              <p>Hindi . 2D</p>
+            </div>
+            <div class="swiper-slide flex flex-col">
+              <img
+                src="images/centralized_162110222025_07_07_05_27_08_220.avif"
+                alt=""
+              /><span class="font-bold text-2xl"
+                >Param Sundari (Hindi Movies)</span
+              >
+              <p>Hindi . 2D</p>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 4,
+        spaceBetween: 50,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    </script>
+  </body>
+</html>

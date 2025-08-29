@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Dice Game 🎲</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .scene {
+      width: 120px;
+      height: 120px;
+      perspective: 800px;
+      margin: auto;
+    }
+    .cube {
+      width: 120px;
+      height: 120px;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateX(0deg) rotateY(0deg);
+      transition: transform 0.3s ease-in-out;
+    }
+    .face {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: white;
+      border: 3px solid #111;
+      border-radius: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      box-shadow: inset 0 0 15px rgba(0,0,0,0.3);
+    }
+    .dot {
+      width: 20px;
+      height: 20px;
+      background: black;
+      border-radius: 50%;
+      margin: 8px;
+    }
+    /* Position faces */
+    .front  { transform: rotateY(0deg) translateZ(60px); }
+    .back   { transform: rotateY(180deg) translateZ(60px); }
+    .right  { transform: rotateY(90deg) translateZ(60px); }
+    .left   { transform: rotateY(-90deg) translateZ(60px); }
+    .top    { transform: rotateX(90deg) translateZ(60px); }
+    .bottom { transform: rotateX(-90deg) translateZ(60px); }
+
+    /* Dots layout per face */
+    .face1 { display: flex; justify-content: center; align-items: center; }
+    .face2 { justify-content: space-between; }
+    .face2 .dot:nth-child(2) { align-self: flex-end; }
+    .face3 { justify-content: space-between; }
+    .face3 .dot:nth-child(2) { align-self: center; }
+    .face3 .dot:nth-child(3) { align-self: flex-end; }
+    .face4 { justify-content: space-between; flex-direction: column; }
+    .face4 div { display: flex; justify-content: space-between; }
+    .face5 { justify-content: space-between; flex-direction: column; }
+    .face5 div { display: flex; justify-content: space-between; }
+    .face5 .center { justify-content: center; }
+    .face6 { justify-content: space-between; flex-direction: column; }
+    .face6 div { display: flex; justify-content: space-between; }
+  </style>
+</head>
+<body class="bg-gradient-to-r from-gray-900 via-purple-900 to-violet-600 min-h-screen flex items-center justify-center">
+  <div class="bg-black/60 backdrop-blur-md shadow-2xl rounded-2xl p-8 w-[420px] text-center text-white">
+    <h1 class="text-3xl font-bold mb-6 text-cyan-400">🎲 Real 3D Dice Game</h1>
+
+    <!-- Dice Display -->
+    <div class="flex justify-center mb-6">
+      <div class="scene">
+        <div id="dice1" class="cube">
+          <!-- Face 1 -->
+          <div class="face front face1"><span class="dot"></span></div>
+          <!-- Face 2 -->
+          <div class="face back face2">
+            <span class="dot"></span><span class="dot"></span>
+          </div>
+          <!-- Face 3 -->
+          <div class="face right face3">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <!-- Face 4 -->
+          <div class="face left face4">
+            <div><span class="dot"></span><span class="dot"></span></div>
+            <div><span class="dot"></span><span class="dot"></span></div>
+          </div>
+          <!-- Face 5 -->
+          <div class="face top face5">
+            <div><span class="dot"></span><span class="dot"></span></div>
+            <div class="center"><span class="dot"></span></div>
+            <div><span class="dot"></span><span class="dot"></span></div>
+          </div>
+          <!-- Face 6 -->
+          <div class="face bottom face6">
+            <div><span class="dot"></span><span class="dot"></span></div>
+            <div><span class="dot"></span><span class="dot"></span></div>
+            <div><span class="dot"></span><span class="dot"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Score -->
+    <p id="score1" class="mt-2 text-lg text-white">Score: 0</p>
+
+    <!-- Result -->
+    <p id="result" class="text-xl font-bold text-white mb-6">Click Roll to Play!</p>
+
+    <!-- Buttons -->
+    <div class="flex justify-center gap-4">
+      <button onclick="rollDice()" class="bg-cyan-500 hover:bg-cyan-600 text-white px-5 py-2 rounded-lg font-semibold transition">Roll 🎲</button>
+      <button onclick="stopDice()" id="stopBtn" class="bg-yellow-500 hover:bg-yellow-600 text-white px-5 py-2 rounded-lg font-semibold transition hidden">Stop ⏹</button>
+      <button onclick="resetGame()" class="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-lg font-semibold transition">Reset 🔄</button>
+    </div>
+  </div>
+
+  <script>
+    let score1 = 0;
+    let rollingInterval = null;
+
+    function rollDice() {
+      const diceElement = document.getElementById("dice1");
+      document.getElementById("stopBtn").classList.remove("hidden");
+      event.target.classList.add("hidden");
+
+      rollingInterval = setInterval(() => {
+        const randomX = Math.floor(Math.random() * 4) * 90 + 360;
+        const randomY = Math.floor(Math.random() * 4) * 90 + 360;
+        diceElement.style.transform = `rotateX(${randomX}deg) rotateY(${randomY}deg)`;
+        const dice1 = Math.floor(Math.random() * 6) + 1;
+        document.getElementById("result").textContent = `Rolling... ${dice1}`;
+      }, 200);
+    }
+
+    function stopDice() {
+      clearInterval(rollingInterval);
+      rollingInterval = null;
+      score1++;
+      const dice1 = Math.floor(Math.random() * 6) + 1;
+      document.getElementById("result").textContent = `You rolled ${dice1}`;
+      document.getElementById("score1").textContent = "Score: " + score1;
+      document.getElementById("stopBtn").classList.add("hidden");
+      document.querySelector("button[onclick='rollDice()']").classList.remove("hidden");
+    }
+
+    function resetGame() {
+      clearInterval(rollingInterval);
+      rollingInterval = null;
+      score1 = 0;
+      document.getElementById("dice1").style.transform = "rotateX(0deg) rotateY(0deg)";
+      document.getElementById("score1").textContent = "Score: 0";
+      document.getElementById("result").textContent = "Click Roll to Play!";
+      document.getElementById("stopBtn").classList.add("hidden");
+      document.querySelector("button[onclick='rollDice()']").classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>

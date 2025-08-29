@@ -25,9 +25,10 @@
   />
   </head>
   <body class="bg-black p-4 ">
-    <main id="cardToDownload" class="max-w-[430px] mx-auto bg-white rounded-2xl border-[5px] border-blue-300">
+    <div id="card">
+    <main id="cardToDownload" class="max-w-[430px] mx-auto bg-white rounded-2xl rounded-b-none border-[5px] border-blue-300">
      <div id="cardContent">
-       <div class="p-3"> <a href="https://digitingcard.com/p/jai-balaji-medical" class=" inline-block"><i class="ph ph-hand-pointing p-2 rounded-full  bg-blue-300"></i></a></div>
+       <div class="p-3"> <a href="https://digitingcard.com/p/jai-balaji-medical" class=" inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#000000" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"></path></svg></a></div>
       <!-- <header class="bg-pink-400 w-full h-20 rounded-t-2xl mb-2"></hedader> -->
       <section class="bg-white text-center p-4 mb-2 rounded-2xl">
         <img
@@ -51,16 +52,34 @@
       <section class="mb-6 m-4">
        <div class="text-center"> <div class="font-bold text-2xl mb-6 border-b border-blue-900 p-2 inline-flex "> Our Contact</div></div>
         <div class="font-family"> 
-        <a href="tel:9826932368"                     class="border-b border-blue-300 rounded-sm p-3 inline-block w-full mb-2 animate__animated animate__pulse "><i class="ph ph-phone border p-2 rounded-full text-white bg-blue-400  "></i> 9826932368</a>
-        <a href="mailto:jaibalajimedicalO@gmail.com" class="border-b border-blue-300 rounded-sm p-3 inline-block w-full mb-2 animate__animated animate__pulse"><i class="ph ph-envelope border p-2 rounded-full text-white bg-blue-400"></i> jaibalajimedicalO@gmail.com</a>
-        <a href="#"                                  class="border-b border-blue-300 rounded-sm p-3 inline-block w-full animate__animated animate__pulse"><i class="ph ph-map-pin border p-2 rounded-full text-white bg-blue-400"></i> Infront of <span class="font-bold">Dr Amit Patil</span>, Shanti Nagar, NDPM</a>
+        <a href="tel:9826932368"                     class="border-b border-blue-300 rounded-sm p-3 inline-flex items-center gap-4 w-full mb-2 animate__animated animate__pulse "><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256" class="border p-2 rounded-full text-white bg-blue-400"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z "></path></svg></i> 9826932368</a>
+        <a href="mailto:jaibalajimedicalO@gmail.com" class="border-b border-blue-300 rounded-sm p-3 inline-flex items-center gap-4 w-full mb-2 animate__animated animate__pulse"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256" class="border p-2 rounded-full text-white bg-blue-400"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"></path></svg> jaibalajimedicalO@gmail.com</a>
+        <a href="#"                                  class="border-b border-blue-300 rounded-sm p-3 inline-flex   items-center gap-4 w-full animate__animated animate__pulse"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000000" viewBox="0 0 256 256" class="border p-2 rounded-full text-white bg-blue-400"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"></path></svg> <span>Infront of <span class="font-bold">Dr Amit Patil</span>, Shanti Nagar, NDPM </span></a>
       </section>
-     </div>
+     </div> </div>
 
-      <footer id="footerDownload" class="bg-blue-300 w-full h-10 text-black font-bold inline-flex text-md items-center justify-center gap-3 cursor-pointer">
-        Download <i class="ph ph-download text-2xl"></i>
-      </footer>
-    </main>
+ <button
+      onclick="downloadCard()"
+      class="w-[430px] mx-auto bg-blue-300 p-4 flex items-center gap-3 cursor-pointer text-black font-bold justify-center"
+    >
+      Download Card
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="black" viewBox="0 0 256 256" >
+        <path d="M128,24a8,8,0,0,1,8,8V136.69l34.34-34.35a8,8,0,0,1,11.32,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48A8,8,0,0,1,93.66,102.34L128,136.69V32A8,8,0,0,1,128,24ZM216,128a8,8,0,0,1,8,8v72a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V136a8,8,0,0,1,16,0v72H208V136A8,8,0,0,1,216,128Z"/>
+      </svg>
+    </button>
 
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+    <script>
+      function downloadCard() {
+        const card = document.getElementById("card");
+        htmlToImage.toPng(card).then(function (dataUrl) {
+          const link = document.createElement("a");
+          link.download = "shrikant-digiting-card.png";
+          link.href = dataUrl;
+          link.click();
+        });
+      }
+    </script>
+  </main>
+ </body>
 </html>
